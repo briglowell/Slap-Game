@@ -146,6 +146,17 @@ function ultimatePunch() {
 function updateDamage() {
   drawHealth()
   drawHits()
+  setTimeout(checkDead, 500);
+}
+
+function checkDead() {
+  if (player.health <= 0) {
+    alert("Real men actually grow mustaches...")
+  } else if (targetMonster.health <= 0) {
+    drawMonster();
+    drawHealth();
+    drawHits();
+  }
 }
 
 function drawHealth() {
@@ -166,6 +177,7 @@ function drawHits() {
 function drawMonster() {
   monsterHitCount = 0;
   targetMonster = monsters[Math.floor(Math.random() * monsters.length)]
+
   let monsterImg = document.getElementById("monster-img")
   // @ts-ignore
   monsterImg.src = targetMonster.img;
@@ -177,6 +189,7 @@ function drawMonster() {
   villianName.innerText = targetMonster.name;
   playerName.innerText = player.name;
 }
+
 
 drawMonster()
 updateDamage()
