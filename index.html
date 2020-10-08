@@ -21,7 +21,9 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-12 text-center">
           <span>Name:<span id="monster-name">--</span></span>
-          <span>Health:<span id="health">--</span></span>
+          <br>
+          <span>Health:<span id="monster-health">--</span></span>
+          <br>
           <span>Hits:<span id="monster-hit-count">--</span></span>
         </div>
       </div>
@@ -32,18 +34,26 @@
     <div class="container-fluid">
       <div class="row justify-content-center text-center">
         <div class="col-12">
-          <img src="//placehold.it/200x200" alt="">
+          <img id="monster-img" height="400" src="//placehold.it/200x200" alt="">
+        </div>
+        <div class="col-12 my-4">
+          <img id="player-img" height="200" src="//placehold.it/200x200" alt="">
+        </div>
+      </div>
+
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12 text-center">
+          <span>Name: <span id="player-name">--</span></span>
+          <br>
+          <span>Health: <span id="player-health">--</span></span>
+          <br>
+          <span>Hits: <span id="player-hit-count">--</span></span>
         </div>
         <div class="col text-center">
           <button class="btn btn-primary" onclick="slap()">Slap</button>
           <button class="btn btn-primary" onclick="punch()">Punch</button>
           <button class="btn btn-primary" onclick="kick()">Kick</button>
           <button class="btn btn-primary" onclick="ultimatePunch()">UltimatePunch</button>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col text-center">
-          <span id="player-name">--</span>
         </div>
       </div>
     </div>
