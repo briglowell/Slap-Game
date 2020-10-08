@@ -38,6 +38,6 @@ function drawHealth() {
   charHealth.innerText = health.toString();
 }
 
-function drawName() {}
+function drawName() { }
 
 drawHealth()
