@@ -8,6 +8,9 @@
 //
 
 var health = 100;
+let monsterName = "";
+let monsterHitCount = 0;
+let playerName = '';
 
 
 function slap() {
@@ -34,5 +37,7 @@ function drawHealth() {
   let charHealth = document.getElementById('health');
   charHealth.innerText = health.toString();
 }
+
+function drawName() {}
 
 drawHealth()
