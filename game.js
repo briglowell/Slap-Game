@@ -12,6 +12,7 @@ let monsterName = "fluffy";
 let monsterHitCount = 0;
 let playerName = "excalibur";
 
+
 function slap() {
   health--;
   monsterHitCount++;
