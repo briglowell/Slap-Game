@@ -15,19 +15,18 @@ function slap() {
 }
 
 function punch() {
-  health = health - 2;
+  health -= 5;
   drawHealth()
 }
 
 function kick() {
-  health = health - 3;
+  health -= 10;
   drawHealth()
 }
 
 function ultimatePunch() {
-  health = health - 7; //two punches with a kick
+  health -= 20; //two punches with a kick
   drawHealth()
-
 }
 
 function drawHealth() {
