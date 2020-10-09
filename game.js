@@ -158,13 +158,17 @@ function checkDead() {
   if (player.health <= 0) {
     if (targetMonster.name == 'frank') alert("Real men actually grow mustaches...");
     let retry = window.prompt("Would you like to try again? y/n");
-    if (retry.toLowerCase() == 'y' || retry.toLowerCase() == 'yes') location.reload();
+    if (retry.toLowerCase() == 'y' || retry.toLowerCase() == 'yes') setTimeout(reloadPage, 500);
   } else if (targetMonster.health <= 0) {
     killCount++;
     drawMonster();
     drawHealth();
     drawHits();
   }
+}
+
+function reloadPage() {
+  location.reload();
 }
 
 function drawHealth() {
