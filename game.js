@@ -8,10 +8,9 @@
 //
 
 let defaultHealth = 100;
-let monsterName = "fluffy";
 let monsterHitCount = 0;
-let playerName = "excalibur";
 let playerHitCount = 0;
+let killCount = 0;
 let targetMonster;
 let frank;
 let skeleton;
@@ -152,13 +151,16 @@ function ultimatePunch() {
 function updateDamage() {
   drawHealth()
   drawHits()
-  setTimeout(checkDead, 500);
+  setTimeout(checkDead, 100);
 }
 
 function checkDead() {
   if (player.health <= 0) {
-    alert("Real men actually grow mustaches...")
+    if (targetMonster.name == 'frank') alert("Real men actually grow mustaches...");
+    let retry = window.prompt("Would you like to try again? y/n");
+    if (retry.toLowerCase() == 'y' || retry.toLowerCase() == 'yes') location.reload();
   } else if (targetMonster.health <= 0) {
+    killCount++;
     drawMonster();
     drawHealth();
     drawHits();
@@ -170,6 +172,8 @@ function drawHealth() {
   monsterHealth.innerText = targetMonster.health.toString();
   let playerHealth = document.getElementById('player-health');
   playerHealth.innerText = player.health.toString();
+  let playerKills = document.getElementById('player-kill-count');
+  playerKills.innerText = killCount.toString();
 }
 
 
@@ -191,14 +195,19 @@ function drawMonster() {
   // @ts-ignore
   playerImg.src = player.img;
   let villianName = document.getElementById('monster-name');
-  let playerName = document.getElementById('player-name');
   villianName.innerText = targetMonster.name;
-  playerName.innerText = player.name;
+  player.innerText = player.name;
 
   document.body.style.backgroundImage = "url('" + targetMonster.background + "')"
 
 }
 
+function drawPlayerName() {
+  let getPlayerName = window.prompt("Please enter player name")
+  let playerName = document.getElementById('player-name');
+  playerName.innerText = getPlayerName;
+}
 
 drawMonster()
 updateDamage()
+drawPlayerName()
