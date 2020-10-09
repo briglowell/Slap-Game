@@ -15,3 +15,7 @@ main {
 footer {
   height: 10vh;
 }
+
+#dungeon-background {
+  background-size: cover;
+}

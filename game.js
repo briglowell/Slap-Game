@@ -37,37 +37,43 @@ let monsters = [
     name: "Mr. Bones",
     img: 'https://i.pinimg.com/originals/df/bf/67/dfbf6712ddee64251c115830a98d00b3.jpg',
     health: defaultHealth * .5,
-    attacks: [1, 2, 5]
+    attacks: [1, 2, 5],
+    background: 'https://art.ngfiles.com/images/1042000/1042781_walnusstinte_aurelia-crypt-background.png?f1570244966'
   },
   skeleton = {
     name: "Mr. Bones",
     img: 'https://i.pinimg.com/originals/df/bf/67/dfbf6712ddee64251c115830a98d00b3.jpg',
     health: defaultHealth * .5,
-    attacks: [1, 2, 5]
+    attacks: [1, 2, 5],
+    background: 'https://art.ngfiles.com/images/1042000/1042781_walnusstinte_aurelia-crypt-background.png?f1570244966'
   },
   mummy = {
     name: "TP",
     img: 'https://i.pinimg.com/564x/85/d4/11/85d41139b8df7ae9a0e6c593269ac694.jpg',
     health: defaultHealth * .75,
-    attacks: [1, 2, 5]
+    attacks: [1, 2, 5],
+    background: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/006e8d6a-6251-4d26-9545-e1d6b992124f/d7em2jm-ed78ae7e-4df6-4db7-b104-24b795d42ff0.jpg/v1/fill/w_1024,h_498,q_75,strp/crypt_background_by_wraeclast_d7em2jm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00OTgiLCJwYXRoIjoiXC9mXC8wMDZlOGQ2YS02MjUxLTRkMjYtOTU0NS1lMWQ2Yjk5MjEyNGZcL2Q3ZW0yam0tZWQ3OGFlN2UtNGRmNi00ZGI3LWIxMDQtMjRiNzk1ZDQyZmYwLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oZCUGI1mGWhBkveV8I45LTyXtIwif5sYra07aSPgsQc'
   },
   banshee = {
     name: "Shriek",
     img: 'https://i.pinimg.com/736x/d4/3d/ac/d43dac16fe05c4bf063941dd2dff18b5.jpg',
     health: defaultHealth,
-    attacks: [1, 2, 5]
+    attacks: [1, 2, 5],
+    background: 'https://i.ytimg.com/vi/nAOAKk3oPRs/maxresdefault.jpg'
   },
   karen = {
     name: "Karen",
     img: 'https://vignette.wikia.nocookie.net/thelastofus/images/2/24/Bloater_Part_II_model.png/revision/latest?cb=20200713122711',
     health: defaultHealth * 5,
-    attacks: [1, 1, 1]
+    attacks: [1, 1, 1],
+    background: 'https://i.pinimg.com/originals/b1/30/67/b130672cb9ec18ef8c44a2e832697ff0.jpg'
   },
   frank = {
     name: "Frank",
     img: 'https://iv1.lisimg.com/image/15289809/608full-hot-rod-screenshot.jpg',
     health: defaultHealth * 2,
-    attacks: [5, 10, 20]
+    attacks: [5, 10, 20],
+    background: 'https://media1.santabanta.com/full1/Hollywood%20Movies/Hot%20Rod/hot2d.jpg'
   },
 ]
 
@@ -188,6 +194,9 @@ function drawMonster() {
   let playerName = document.getElementById('player-name');
   villianName.innerText = targetMonster.name;
   playerName.innerText = player.name;
+
+  document.body.style.backgroundImage = "url('" + targetMonster.background + "')"
+
 }
 
 
